@@ -39,22 +39,7 @@ var assertFileExists = function(infile) {
 };
 
 var assertURLExists = function(fileURL) {
-    var wait = true;
-    var result = restler.get(fileURL.toString()).on('complete', function(data) {    
-        if (data instanceof Error)
-        {
-            console.log("%s does not exist. Exiting.", fileURL);
-            wait = false;
-        }
-        else
-        {
-            console.log(data);
-            data;    
-            wait = false;
-        }
-    });
-    while (wait);
-    return result;
+   return fileURL;
 };
 
 var cheerioHtmlFile = function(htmlfile) {
@@ -104,14 +89,18 @@ if(require.main == module) {
     if (program.file) 
     {
         checkJson = checkHtmlFile(program.file, program.checks);
+        var outJson = JSON.stringify(checkJson, null, 4);
+        console.log(outJson);
     }
     else if (program.url)
     {
-        checkJson = checkURL(program.url, program.checks);  
+        restler.get(program.url).on('complete', function(data) {
+            checkJson = checkURL(data, program.checks); 
+            var outJson = JSON.stringify(checkJson, null, 4);
+            console.log(outJson);                 
+        });
     }
- 
-    var outJson = JSON.stringify(checkJson, null, 4);
-    console.log(outJson);
+    
 } else {
     exports.checkHtmlFile = checkHtmlFile;
     exports.checkURL = checkURL;

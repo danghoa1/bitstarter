@@ -3,13 +3,17 @@ var fs = require('fs');
 
 var app = express(express.logger());
 
-// Load HTML
-var infile = "index.html";
-var buffer = fs.readFileSync(infile);
 
+// Serve files
+app.configure(function () {
+	app.use('/bootstrap', express.static(__dirname + '/bootstrap'));
+  	app.use('/css', express.static(__dirname + '/css'));
+  	app.use('/js', express.static(__dirname + '/js'));
+});
 
-app.get('/', function(request, response) {
-	response.send(buffer.toString());
+// Router
+app.get('/', function(req,res) {
+	res.sendfile(__dirname + '/html/index.html');
 });
 
 var port = process.env.PORT || 5000;
