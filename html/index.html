@@ -2,18 +2,61 @@
 <html>  
   <head>  
     <title>Fixed layout example with Twitter Bootstrap</title>  
+
+    <!-- Set width to be the device's screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <!-- Bootstrap -->  
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">  
+
+    <!-- Bootstrap --> 
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet"> 
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">  
   </head>  
   <body>  
-    <div class="container">  
-      <div class="row">  
-        <div class="span4"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum. Suspendisse vulputate aliquam dui. Nulla elementum dui ut augue. Aliquam vehicula mi at mauris. Maecenas placerat, nisl at consequat rhoncus, sem nunc gravida justo, quis eleifend arcu velit quis lacus. Morbi magna magna, tincidunt a, mattis non, imperdiet vitae, tellus. Sed odio est, auctor ac, sollicitudin in, consequat vitae, orci. Fusce id felis. Vivamus sollicitudin metus eget eros.</p></div>  
-        <div class="span4"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum. Suspendisse vulputate aliquam dui. Nulla elementum dui ut augue. Aliquam vehicula mi at mauris. Maecenas placerat, nisl at consequat rhoncus, sem nunc gravida justo, quis eleifend arcu velit quis lacus. Morbi magna magna, tincidunt a, mattis non, imperdiet vitae, tellus. Sed odio est, auctor ac, sollicitudin in, consequat vitae, orci. Fusce id felis. Vivamus sollicitudin metus eget eros.</p></div>  
-        <div class="span4"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum. Suspendisse vulputate aliquam dui. Nulla elementum dui ut augue. Aliquam vehicula mi at mauris. Maecenas placerat, nisl at consequat rhoncus, sem nunc gravida justo, quis eleifend arcu velit quis lacus. Morbi magna magna, tincidunt a, mattis non, imperdiet vitae, tellus. Sed odio est, auctor ac, sollicitudin in, consequat vitae, orci. Fusce id felis. Vivamus sollicitudin metus eget eros.</p></div>  
-      </div>    
-    </div>  
+
+    <!-- Navigation Bar -->
+
+    <div class="navbar navbar-fixed-top navbar-inverse">  
+      <div class="navbar-inner">  
+        <div class="container">
+          <ul class="nav pull-left">
+            <li class="active"><a class="brand" href="/">Speedy Order</a></li> 
+          </ul>
+          <ul class="nav pull-center"> 
+            <li><a href="/">Home</a></li>  
+            <li><a href="/products">Products</a></li>  
+            <li><a href="/pricing">Pricing</a></li>  
+            <li><a href="/faq">FAQ</a></li>  
+            <li><a href="/contactus">Contact Us</a></li>  
+          </ul>
+        </div>  
+      </div>  
+    </div>   
+
+    <!-- Image -->
+    
+
+    <div class="container">
+        
+        <hr>
+        <hr>
+        
+        <img src="/img/Home.png" style="border:1px solid black;"/>
+
+        <hr>
+
+        <div class="row">
+          <div class="span6">
+            <p> Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello </p>
+          </div>
+          <div class="span6">
+            <p> HHello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Bootstrap, JQuery -->
     <script src="http://code.jquery.com/jquery.js"></script>  
     <script src="bootstrap/js/bootstrap.min.js"></script>  
   </body>  
